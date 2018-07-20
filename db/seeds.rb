@@ -133,4 +133,73 @@ cat3.products.create!({
 })
 
 
-puts "DONE!"
+puts "Products created"
+User.create!([
+  {
+    name:  'Bobby',
+    email: 'boes@hotmail.com',
+    password_digest: '@123',
+  },
+  {
+    name:  'DudeMan',
+    email: 'duddee@hotmail.com',
+    password_digest: '123',
+  },
+  {
+    name:  'Ruye',
+    email: 'ruye@hotmail.com',
+    password_digest: '123',
+  },
+  {
+    name:  'Ghiue',
+    email: 'ghiue@hotmail.com',
+    password_digest: '123',
+  }])
+puts "Re-creating Reviews ..."
+Review.create!([
+  {
+    product_id:  1,
+    user_id: 1,
+    description: 'Terrible',
+    rating: 2
+  },
+  {
+    product_id:  1,
+    user_id: 2,
+    description: 'This product was not what I expected',
+    rating: 2
+  },
+  {
+    product_id:  1,
+    user_id: 3,
+    description: 'Not good',
+    rating: 1
+  },
+  {
+    product_id:  2,
+    user_id: 4,
+    description: 'Eww',
+    rating: 1
+  },
+  {
+    product_id:  1,
+    user_id: 1,
+    description: 'Amazing. ',
+    rating: 5
+  },
+  {
+    product_id:  2,
+    user_id: 1,
+    description: 'Well worth it',
+    rating: 4
+  },
+  {
+    product_id:  5,
+    user_id: 1,
+    description: 'Not what I wanted ',
+    rating: 1
+  }
+  ])
+
+
+puts "DONE"
