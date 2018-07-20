@@ -62,6 +62,8 @@ main section.categories-show {
         font-size: 1.0em;
       }
 
+
+
       &:hover {
 
         border-color: #999;
@@ -71,8 +73,12 @@ main section.categories-show {
         }
       }
 
+
+
     }
   }
+
+
 }
 
 main section.products-show {
@@ -83,5 +89,14 @@ main section.products-show {
     }
   }
 }
+
+.x {
+  display: flex;
+  }
+
+.x_x {
+  display: flex;
+}
+
 
 

@@ -30,8 +30,8 @@
 <% if current_user %>
   <%= form_for :review, url: product_reviews_path(@product.id) do |f| %>
     <%= f.text_area :description %>
-    <%= f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]] %>
-    <%= f.submit %>
+    <%= f.select :rating, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]], {class: 'x_x'} %>
+    <%= f.submit class: 'x' %>
   <% end %>
 <% end %>
 
@@ -43,14 +43,14 @@
      <h4>
        <%= review.user.name %>
        <% review.rating.times do |star| %>
-         :star:
+         🌟
        <% end %>
      </h4>
      <p><%= review.description %></p>
      <% if current_user %>
         <% if review.user_id==current_user.id %>
           <%= link_to "Delete", product_review_path(@product, review), class: "btn btn-xs btn-danger", :method => :delete %>
-           <% end %>
+        <% end %>
      <% end %>
 
 
