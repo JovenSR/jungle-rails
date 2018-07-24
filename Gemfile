@@ -41,11 +41,7 @@ gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-<<<<<<< HEAD
-  gem 'rspec-rails', '~> 3.5'
-=======
   gem 'rspec-rails', '~> 3.7'
->>>>>>> feature/product-specs
   gem 'byebug'
   gem 'quiet_assets'
   gem 'dotenv-rails'
